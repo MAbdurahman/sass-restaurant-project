@@ -1,0 +1,12 @@
+{
+  "name": "sass-restaurant-project",
+  "version": "1.0.0",
+  "description": "sass web application",
+  "main": "index.html",
+  "repository": "https://github.com/MAbdurahman/sass-restaurant-project.git",
+  "author": "Mahdi Abdurrahman <mdbdrrhm@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "scss": "sass scss/main.scss src/css/main.css --watch --style compressed"
+  }
+}
