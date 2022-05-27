@@ -1,0 +1,58 @@
+/*=============================================
+              _about-us.scss
+================================================*/
+@use './../abstracts' as abs;
+
+.about-us {
+  height: 90vh;
+  @include abs.flex-center-vertical;
+
+  &-left {
+    width: 40%;
+    position: relative;
+    left: -200px;
+
+
+    img {
+      width: 100%;
+      opacity: .7;
+    }
+
+  }
+
+  &-right {
+    width: 60%;
+    @include abs.flex-center-vertical;
+    flex-direction: column;
+    padding: 0 96px;
+
+
+    .stars {
+      margin: 30px 0;
+
+
+    }
+
+    .star {
+      font-size: 16px;
+      color: abs.$color-primary;
+      margin-left: 10px;
+
+
+
+    }
+
+    .description {
+      font-family: abs.$font-josefin-sans;
+      font-size: 24px;
+      font-style: italic;
+      color: abs.$color-secondary;
+      text-align: justify;
+
+      &::first-letter {
+        padding-left: 48px;
+      }
+    }
+  }
+
+}
