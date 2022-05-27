@@ -1,0 +1,31 @@
+/*=============================================
+          _main-heading.scss
+================================================*/
+@use './../abstracts' as abs;
+
+
+.main-heading {
+  font-family: abs.$font-dancing-script;
+  font-size: 100px;
+  font-weight: 300;
+  color: abs.$color-primary;
+  margin-bottom: 40px;
+
+
+}
+
+.sub-heading {
+  font-family: abs.$font-josefin-sans;
+  font-size: 60px;
+  font-weight: 300;
+  color: abs.$color-secondary;
+  margin-bottom: 80px;
+  text-align: center
+
+}
+
+.main-btn {
+  @include abs.button-default();
+  @include abs.background-transition-basic(transparent, abs.$color-primary);
+
+}
