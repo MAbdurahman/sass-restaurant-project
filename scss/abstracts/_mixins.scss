@@ -1,0 +1,39 @@
+/*=============================================
+          _mixins.scss
+================================================*/
+@use './variables' as var;
+@use './functions' as func;
+
+
+
+
+
+
+@mixin anchor-underline-hover-effect($clr: #fff) {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.25em;
+  text-decoration: none;
+  color: $clr;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: $clr;
+    transition: width 0.25s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+}
+
+@mixin transition-basic($param ...) {
+  transition: $param;
+}
