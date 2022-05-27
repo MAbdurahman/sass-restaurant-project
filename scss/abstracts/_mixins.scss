@@ -1,0 +1,125 @@
+/*=============================================
+          _mixins.scss
+================================================*/
+@use './variables' as var;
+@use './functions' as func;
+
+
+@mixin absolute-center-top-position($top-value: 50%) {
+  position: absolute;
+  top: $top-value;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@mixin anchor-underline-hover-effect($clr: #fff) {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.25em;
+  text-decoration: none;
+  color: $clr;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: $clr;
+    transition: width 0.25s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+}
+
+
+
+@mixin background-transition-basic($initial, $hover, $inverted: false) {
+  background: linear-gradient(
+                  90deg,
+                  $hover 0%,
+                  $hover 50%,
+                  $initial 50%,
+                  $initial 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+
+  background-position: right bottom;
+  @if $inverted {
+    background-position: left bottom;
+  }
+  transition: background-position 0.25s ease-out;
+
+  &:hover {
+    background-position: left bottom;
+    @if $inverted {
+      background-position: right bottom;
+    }
+  }
+}
+
+@mixin button-default($font: var.$font-josefin-sans) {
+  width: 170px;
+  height: 45px;
+  padding: 1em 2em;
+  font-family: $font;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid var.$color-primary;
+  outline: none;
+  color: var.$color-primary;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: var.$color-white;
+
+  }
+}
+
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+
+@mixin text-styles($transform: uppercase) {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: $transform;
+}
+
+@mixin transition-basic($param ...) {
+  transition: $param;
+}

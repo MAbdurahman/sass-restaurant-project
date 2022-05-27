@@ -7,6 +7,6 @@
   "author": "Mahdi Abdurrahman <mdbdrrhm@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "scss": "sass scss/main.scss src/css/main.css --watch --style compressed"
+    "scss": "sass scss/main.scss css/main.css --watch --style expanded"
   }
 }
