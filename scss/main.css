@@ -1,4 +1,7 @@
 /*=============================================
+          _variables.scss
+================================================*/
+/*=============================================
        _reset.scss
 ================================================*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -340,12 +343,110 @@ template {
   display: none;
 }
 
+/* =========================================
+              Website Resets
+============================================ */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+*::-moz-focus-inner {
+  border: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: #262626;
+}
+
 /*=============================================
           _typography.scss
 ================================================*/
 /*=============================================
           _utils.scss
 ================================================*/
+/*=============================================
+          _functions.scss
+================================================*/
+/*=============================================
+          _mixins.scss
+================================================*/
+/*=============================================
+          _placeholder.scss
+================================================*/
+/*=============================================
+         _index.scss
+================================================*/
+/*=============================================
+          _header.scss
+================================================*/
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(./../img/bg.jpeg) center no-repeat;
+  background-size: cover;
+}
+.header .brand {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*=============================================
+          _logo.scss
+================================================*/
+.logo {
+  font-size: 70px;
+  color: #d3ab55;
+  width: 110px;
+  height: 110px;
+  border: 3px solid #d3ab55;
+  border-radius: 50%;
+  margin-right: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*=============================================
+          _main-name.scss
+================================================*/
+.main-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  color: #bbb;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sub-name {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  color: #bbb;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 /*=============================================
           main.scss
 ================================================*/

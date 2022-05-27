@@ -8,9 +8,12 @@
 
 
 // layout
+@use './layouts/header';
 
 
 // components
+@use './components/logo';
+@use './components/main-name';
 
 
 

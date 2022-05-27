@@ -1,6 +1,7 @@
 /*=============================================
        _reset.scss
 ================================================*/
+@use "./../abstracts/variables" as var;
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -349,4 +350,33 @@ template {
 
 [hidden] {
   display: none;
+}
+
+
+/* =========================================
+              Website Resets
+============================================ */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+*::-moz-focus-inner {
+  border: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: var.$color-black-dark;
 }
