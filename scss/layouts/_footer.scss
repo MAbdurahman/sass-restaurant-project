@@ -1,0 +1,48 @@
+/*=============================================
+              _footer.scss
+================================================*/
+@use './../abstracts' as abs;
+
+.footer {
+  @include abs.flex-center-column;
+  padding: 70px 0;
+
+
+    &-header {
+      @include abs.flex-center-vertical;
+      margin-bottom: 70px;
+
+
+
+    }
+    .social-media {
+      display: flex;
+      width: 300px;
+      justify-content: space-between;
+      margin-bottom: 70px;
+
+
+      &-item {
+        list-style: none;
+      }
+
+      &-link {
+        text-decoration: none;
+        font-size: 50px;
+        color: abs.$color-secondary;
+        transition: color .7s;
+
+        &:hover {
+          color: abs.$color-primary;
+        }
+      }
+    }
+
+  &-copyright-paragraph {
+    font-family: abs.$font-josefin-sans;
+    font-size: 18px;
+    color: abs.$color-secondary;
+    @include abs.text-styles(capitalize);
+  }
+
+}
