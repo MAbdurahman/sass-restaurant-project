@@ -518,6 +518,129 @@ body {
 }
 
 /*=============================================
+            _navbar.scss
+================================================*/
+.navbar {
+  position: relative;
+  z-index: 200;
+}
+.navbar-navigation {
+  display: flex;
+}
+.navbar-navigation-left {
+  position: fixed;
+  width: 50vw;
+  height: 100vh;
+  background-color: #262626;
+  left: -50vw;
+  left: 0;
+  transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+}
+.navbar-navigation-left .left-img {
+  position: absolute;
+  width: 50%;
+  box-shadow: 0 15px 60px rgba(38, 38, 38, 0.4);
+  opacity: 0.7;
+  border-radius: 8px;
+}
+.navbar-navigation-left .left-img-1 {
+  top: 15%;
+  left: 15%;
+}
+.navbar-navigation-left .left-img-2 {
+  top: 35%;
+  left: 25%;
+}
+.navbar-navigation-left .left-img-3 {
+  top: 55%;
+  left: 35%;
+}
+.navbar-navigation-right {
+  position: fixed;
+  width: 50vw;
+  height: 100vh;
+  background-color: #1f1d1d;
+  right: -50vw;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+}
+.navbar-navigation .nav-list-item {
+  list-style: none;
+}
+.navbar-navigation .nav-list-link {
+  /*        font-family: abs.$font-dancing-script;
+          font-size: 50px;
+          @include abs.text-styles(capitalize);
+          color: abs.$color-secondary;
+          text-decoration: none;
+          display: block;
+          margin: 20px;
+          text-align: center;
+          transition: all .5s;
+
+          &:hover {
+            color: abs.$color-primary;
+            letter-spacing: 4px;
+          }*/
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.25em;
+  text-decoration: none;
+  color: #ece6e6;
+  margin: 8px;
+  font-family: "Dancing Script", cursive;
+  font-size: 48px;
+}
+.navbar-navigation .nav-list-link::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ece6e6;
+  transition: width 0.25s ease-in-out;
+}
+.navbar-navigation .nav-list-link:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.navbar-navigation .nav-list-link::before {
+  background-color: #d3ab55;
+}
+.navbar-navigation .nav-list-link:hover {
+  color: #d3ab55;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left: 0;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  right: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu {
+  transform: rotateZ(90deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+  transform: rotateZ(-40deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+  transform: rotateZ(40deg);
+}
+
+/*=============================================
           _logo.scss
 ================================================*/
 .logo {
