@@ -1,0 +1,40 @@
+/*=============================================
+            _menu-button.scss
+================================================*/
+@use './../abstracts' as abs;
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 300;
+
+
+  .menu {
+    @extend %full-space;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform .5s;
+
+    &-line {
+      width: 100%;
+      height: 4px;
+      background-color: abs.$color-primary;
+      transform-origin: right;
+      transition: all .5s .5s;
+
+
+    }
+
+  }
+
+
+
+
+
+
+}
