@@ -12,13 +12,14 @@
 @use './layouts/about-us';
 @use './layouts/gallery';
 @use './layouts/footer';
-
+@use './layouts/navbar';
 
 // components
 @use './components/logo';
 @use './components/main-name';
 @use './components/main-heading';
 @use './components/card';
+@use './components/menu-button';
 
 
 
