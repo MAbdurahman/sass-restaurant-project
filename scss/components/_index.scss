@@ -1,4 +1,7 @@
 /*=============================================
           _index.scss
 ================================================*/
-@use 'logo';
+@forward 'card';
+@forward 'logo';
+@forward 'main-heading';
+@forward 'main-name';

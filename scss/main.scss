@@ -10,12 +10,14 @@
 // layout
 @use './layouts/header';
 @use './layouts/about-us';
+@use './layouts/gallery';
 
 
 // components
 @use './components/logo';
 @use './components/main-name';
 @use './components/main-heading';
+@use './components/card';
 
 
 
