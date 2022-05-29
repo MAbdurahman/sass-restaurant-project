@@ -647,6 +647,7 @@ body {
 .main-name {
   font-family: "Nunito", sans-serif;
   font-size: 50px;
+  font-size: 24px;
   color: #bbb;
   font-weight: 300;
   letter-spacing: 2px;
