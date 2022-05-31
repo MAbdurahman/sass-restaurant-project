@@ -201,6 +201,21 @@
   @include dimension($width, $height);
 }
 
+
+@mixin responsive-max-width($max-width) {
+  @media only screen and (max-width: $max-width) {
+    @content;
+  }
+
+}
+
+@mixin responsive-min-width($min-width) {
+  @media only screen and (min-width: $min-width) {
+    @content;
+  }
+
+}
+
 @mixin text-styles($transform: uppercase) {
   font-weight: 300;
   letter-spacing: 2px;
