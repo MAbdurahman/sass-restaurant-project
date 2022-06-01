@@ -780,18 +780,18 @@ body {
   color: #d3ab55;
   margin-bottom: 40px;
 }
-@media (max-width: 1600px) {
+@media only screen and (max-width: 1600px) {
   .main-heading {
     font-size: 80px;
     margin-bottom: 24px;
   }
 }
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .main-heading {
     font-size: 60px;
   }
 }
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .main-heading {
     font-size: 40px;
     margin-bottom: 20px;
@@ -806,24 +806,24 @@ body {
   margin-bottom: 80px;
   text-align: center;
 }
-@media (max-width: 1600px) {
+@media only screen and (max-width: 1600px) {
   .sub-heading {
     font-size: 50px;
     margin-bottom: 32px;
   }
 }
-@media (max-width: 1300px) {
+@media only screen and (max-width: 1300px) {
   .sub-heading {
     font-size: 40px;
     margin-bottom: 24px;
   }
 }
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .sub-heading {
     font-size: 30px;
   }
 }
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .sub-heading {
     font-size: 20px;
     margin-bottom: 10px;
@@ -856,14 +856,14 @@ body {
 .main-btn:hover {
   background-position: left bottom;
 }
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .main-btn {
     width: 150px;
     height: 35px;
     font-size: 12px;
   }
 }
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .main-btn {
     width: 130px;
     height: 30px;

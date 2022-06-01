@@ -11,16 +11,18 @@
   color: abs.$color-primary;
   margin-bottom: 40px;
 
-  @media(max-width: 1600px) {
+
+  @include abs.responsive-max-width(1600px) {
     font-size: 80px;
     margin-bottom: 24px;
   }
 
-  @media(max-width: 1000px) {
+  @include abs.responsive-max-width(1000px) {
     font-size: 60px;
+
   }
 
-  @media(max-width: 500px) {
+  @include abs.responsive-max-width(500px) {
     font-size: 40px;
     margin-bottom: 20px;
   }
@@ -35,23 +37,26 @@
   margin-bottom: 80px;
   text-align: center;
 
-  @media(max-width: 1600px) {
+  @include abs.responsive-max-width(1600px) {
     font-size: 50px;
     margin-bottom: 32px;
   }
 
-  @media(max-width: 1300px) {
+  @include abs.responsive-max-width(1300px) {
     font-size: 40px;
     margin-bottom: 24px;
+
   }
 
-  @media(max-width: 1000px) {
+  @include abs.responsive-max-width(1000px) {
     font-size: 30px;
+
   }
 
-  @media(max-width: 500px) {
+  @include abs.responsive-max-width(500px) {
     font-size: 20px;
     margin-bottom: 10px;
+
   }
 
 }
@@ -60,13 +65,13 @@
   @include abs.button-default();
   @include abs.background-transition-basic(transparent, abs.$color-primary);
 
-  @media(max-width: 800px) {
+  @include abs.responsive-max-width(800px) {
     width: 150px;
     height: 35px;
     font-size: 12px;
   }
 
-  @media(max-width: 500px) {
+  @include abs.responsive-max-width(500px) {
     width: 130px;
     height: 30px;
     font-size: 10px;
