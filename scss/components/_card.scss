@@ -31,8 +31,23 @@
       font-size: 48px;
       @include abs.text-styles(capitalize);
 
+@include abs.responsive-max-width(900px) {
+  font-size: 32px;
+
+}
+
+      @include abs.responsive-max-width(650px) {
+          font-size: 24px;
 
 
+      }
+
+      @include abs.responsive-max-width(500px) {
+
+        display: none;
+
+
+      }
     }
 
     &-paragraph {
@@ -41,6 +56,24 @@
       margin-bottom: 30px;
       @include abs.text-styles(capitalize);
 
+      @include abs.responsive-max-width(900px) {
+        font-size: 20px;
+
+      }
+
+      @include abs.responsive-max-width(650px) {
+        font-size: 16px;
+
+
+      }
+
+      @include abs.responsive-max-width(500px) {
+
+        display: none;
+
+
+      }
+
     }
 
     &-btn {
@@ -48,7 +81,22 @@
       width: 152px;
       height: 40px;
       font-size: 12px;
-      @include abs.background-transition-basic(abs.$color-primary, transparent, true);
+      /*@include abs.background-transition-basic(abs.$color-primary, transparent, true)*/;
+      @include abs.background-transition-basic(transparent, abs.$color-primary);
+
+
+      @include abs.responsive-max-width(900px) {
+        font-size: 12px;
+        width: 130px;
+        height: 30px;
+      }
+
+      @include abs.responsive-max-width(650px) {
+        font-size: 8px;
+        width: 100px;
+        height: 30px;
+      }
+
     }
   }
 

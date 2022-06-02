@@ -11,7 +11,8 @@
 
   @include abs.responsive-max-width(1600px) {
     padding-top: 128px;
-    margin-bottom: 32px;
+    //margin-bottom: 32px;
+    padding-bottom: 128px;
 
   }
 
@@ -25,7 +26,9 @@
     /*left: -200px;*/
 
     @include abs.responsive-max-width(1300px) {
-      left: -150px;
+      //left: -150px;
+      padding-top: 5em;
+
 
     }
 
@@ -48,7 +51,11 @@
     padding: 0 96px;
 
     @include abs.responsive-max-width(1600px) {
-
+      .sub-heading {
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+      }
     }
 
     @include abs.responsive-max-width(1300px) {
@@ -61,8 +68,14 @@
 
     }
 
+
     .stars {
       margin: 30px 0;
+
+      @include abs.responsive-max-width(1600px) {
+        margin-top: 8px;
+
+      }
 
       @include abs.responsive-max-width(1000px) {
         margin: 15px 0;
