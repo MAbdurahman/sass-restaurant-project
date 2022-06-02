@@ -378,6 +378,116 @@ body {
           _utils.scss
 ================================================*/
 /*=============================================
+            _grid.scss
+================================================*/
+.container {
+  width: calc(100% - 2em);
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  flex: 0 0 calc(100% / 12 * 1);
+}
+
+.col-offset-1 {
+  margin-left: calc(100% / 12 * 1);
+}
+
+.col-2 {
+  flex: 0 0 calc(100% / 12 * 2);
+}
+
+.col-offset-2 {
+  margin-left: calc(100% / 12 * 2);
+}
+
+.col-3 {
+  flex: 0 0 calc(100% / 12 * 3);
+}
+
+.col-offset-3 {
+  margin-left: calc(100% / 12 * 3);
+}
+
+.col-4 {
+  flex: 0 0 calc(100% / 12 * 4);
+}
+
+.col-offset-4 {
+  margin-left: calc(100% / 12 * 4);
+}
+
+.col-5 {
+  flex: 0 0 calc(100% / 12 * 5);
+}
+
+.col-offset-5 {
+  margin-left: calc(100% / 12 * 5);
+}
+
+.col-6 {
+  flex: 0 0 calc(100% / 12 * 6);
+}
+
+.col-offset-6 {
+  margin-left: calc(100% / 12 * 6);
+}
+
+.col-7 {
+  flex: 0 0 calc(100% / 12 * 7);
+}
+
+.col-offset-7 {
+  margin-left: calc(100% / 12 * 7);
+}
+
+.col-8 {
+  flex: 0 0 calc(100% / 12 * 8);
+}
+
+.col-offset-8 {
+  margin-left: calc(100% / 12 * 8);
+}
+
+.col-9 {
+  flex: 0 0 calc(100% / 12 * 9);
+}
+
+.col-offset-9 {
+  margin-left: calc(100% / 12 * 9);
+}
+
+.col-10 {
+  flex: 0 0 calc(100% / 12 * 10);
+}
+
+.col-offset-10 {
+  margin-left: calc(100% / 12 * 10);
+}
+
+.col-11 {
+  flex: 0 0 calc(100% / 12 * 11);
+}
+
+.col-offset-11 {
+  margin-left: calc(100% / 12 * 11);
+}
+
+.col-12 {
+  flex: 0 0 calc(100% / 12 * 12);
+}
+
+.col-offset-12 {
+  margin-left: calc(100% / 12 * 12);
+}
+
+/*=============================================
           _functions.scss
 ================================================*/
 /*=============================================
@@ -428,11 +538,33 @@ body {
   height: 90vh;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 1600px) {
+  .about-us {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .about-us {
+    height: 70vh;
+  }
 }
 .about-us-left {
   width: 40%;
   position: relative;
-  left: -200px;
+  /*left: -200px;*/
+}
+@media only screen and (max-width: 1300px) {
+  .about-us-left {
+    padding-top: 5em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .about-us-left {
+    display: none;
+  }
 }
 .about-us-left img {
   width: 100%;
@@ -445,13 +577,45 @@ body {
   flex-direction: column;
   padding: 0 96px;
 }
+@media only screen and (max-width: 1600px) {
+  .about-us-right .sub-heading {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .about-us-right {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .about-us-right {
+    width: 100%;
+  }
+}
 .about-us-right .stars {
   margin: 30px 0;
+}
+@media only screen and (max-width: 1600px) {
+  .about-us-right .stars {
+    margin-top: 8px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .about-us-right .stars {
+    margin: 15px 0;
+  }
 }
 .about-us-right .star {
   font-size: 16px;
   color: #d3ab55;
   margin-left: 10px;
+}
+@media only screen and (max-width: 1000px) {
+  .about-us-right .star {
+    font-size: 12px;
+  }
 }
 .about-us-right .description {
   font-family: "Josefin Sans", sans-serif;
@@ -463,12 +627,32 @@ body {
 .about-us-right .description::first-letter {
   padding-left: 48px;
 }
+@media only screen and (max-width: 1600px) {
+  .about-us-right .description {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .about-us-right .description {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .about-us-right .description {
+    font-size: 12px;
+  }
+}
 
 /*=============================================
             _gallery.scss
 ================================================*/
 .gallery {
-  padding-top: 72px;
+  padding-top: 96px;
+}
+@media (max-width: 1600px) {
+  .gallery {
+    padding-top: 120px;
+  }
 }
 .gallery .cards-wrapper {
   display: flex;
@@ -485,6 +669,11 @@ body {
   flex-direction: column;
   padding: 70px 0;
 }
+@media only screen and (max-width: 500px) {
+  .footer {
+    padding: 40px 0;
+  }
+}
 .footer-header {
   display: flex;
   align-items: center;
@@ -495,6 +684,12 @@ body {
   width: 300px;
   justify-content: space-between;
   margin-bottom: 70px;
+}
+@media only screen and (max-width: 500px) {
+  .footer .social-media {
+    width: 200px;
+    margin-bottom: 40px;
+  }
 }
 .footer .social-media-item {
   list-style: none;
@@ -507,6 +702,16 @@ body {
 }
 .footer .social-media-link:hover {
   color: #d3ab55;
+}
+@media only screen and (max-width: 1000px) {
+  .footer .social-media-link {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .footer .social-media-link {
+    font-size: 24px;
+  }
 }
 .footer-copyright-paragraph {
   font-family: "Josefin Sans", sans-serif;
@@ -640,6 +845,26 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 1600px) {
+  .logo {
+    font-size: 64px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .logo {
+    font-size: 50px;
+    width: 90px;
+    height: 90px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .logo {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    border-width: 2px;
+  }
+}
 
 /*=============================================
           _main-name.scss
@@ -652,6 +877,17 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 1000px) {
+  .main-name {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main-name {
+    font-size: 20px;
+    text-align: center;
+  }
+}
 
 .sub-name {
   font-family: "Josefin Sans", sans-serif;
@@ -661,6 +897,12 @@ body {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 500px) {
+  .sub-name {
+    font-size: 12px;
+    text-align: center;
+  }
 }
 
 /*=============================================
@@ -673,6 +915,23 @@ body {
   color: #d3ab55;
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 1600px) {
+  .main-heading {
+    font-size: 80px;
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .main-heading {
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main-heading {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
 
 .sub-heading {
   font-family: "Josefin Sans", sans-serif;
@@ -681,6 +940,29 @@ body {
   color: #bbb;
   margin-bottom: 80px;
   text-align: center;
+}
+@media only screen and (max-width: 1600px) {
+  .sub-heading {
+    font-size: 50px;
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .sub-heading {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .sub-heading {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sub-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 .main-btn {
@@ -708,6 +990,20 @@ body {
 }
 .main-btn:hover {
   background-position: left bottom;
+}
+@media only screen and (max-width: 800px) {
+  .main-btn {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main-btn {
+    width: 130px;
+    height: 30px;
+    font-size: 10px;
+  }
 }
 
 /*=============================================
@@ -742,6 +1038,21 @@ body {
   letter-spacing: 2px;
   text-transform: capitalize;
 }
+@media only screen and (max-width: 900px) {
+  .card-overlay-heading {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .card-overlay-heading {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card-overlay-heading {
+    display: none;
+  }
+}
 .card-overlay-paragraph {
   font-family: "Josefin Sans", sans-serif;
   font-size: 30px;
@@ -749,6 +1060,21 @@ body {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: capitalize;
+}
+@media only screen and (max-width: 900px) {
+  .card-overlay-paragraph {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .card-overlay-paragraph {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card-overlay-paragraph {
+    display: none;
+  }
 }
 .card-overlay-btn {
   width: 170px;
@@ -766,11 +1092,11 @@ body {
   width: 152px;
   height: 40px;
   font-size: 12px;
-  background: linear-gradient(90deg, transparent 0%, transparent 50%, #d3ab55 50%, #d3ab55 100%);
+  /*@include abs.background-transition-basic(abs.$color-primary, transparent, true)*/
+  background: linear-gradient(90deg, #d3ab55 0%, #d3ab55 50%, transparent 50%, transparent 100%);
   background-repeat: no-repeat;
   background-size: 200% 100%;
   background-position: right bottom;
-  background-position: left bottom;
   transition: background-position 0.25s ease-out;
 }
 .card-overlay-btn:hover, .card-overlay-btn:focus {
@@ -779,7 +1105,20 @@ body {
 }
 .card-overlay-btn:hover {
   background-position: left bottom;
-  background-position: right bottom;
+}
+@media only screen and (max-width: 900px) {
+  .card-overlay-btn {
+    font-size: 12px;
+    width: 130px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .card-overlay-btn {
+    font-size: 8px;
+    width: 100px;
+    height: 30px;
+  }
 }
 .card-img {
   object-fit: cover;

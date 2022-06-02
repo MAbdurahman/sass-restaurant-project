@@ -12,6 +12,21 @@
   margin-bottom: 40px;
 
 
+  @include abs.responsive-max-width(1600px) {
+    font-size: 80px;
+    margin-bottom: 24px;
+  }
+
+  @include abs.responsive-max-width(1000px) {
+    font-size: 60px;
+
+  }
+
+  @include abs.responsive-max-width(500px) {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
 }
 
 .sub-heading {
@@ -20,12 +35,46 @@
   font-weight: 300;
   color: abs.$color-secondary;
   margin-bottom: 80px;
-  text-align: center
+  text-align: center;
+
+  @include abs.responsive-max-width(1600px) {
+    font-size: 50px;
+    margin-bottom: 32px;
+  }
+
+  @include abs.responsive-max-width(1300px) {
+    font-size: 40px;
+    margin-bottom: 24px;
+
+  }
+
+  @include abs.responsive-max-width(1000px) {
+    font-size: 30px;
+
+  }
+
+  @include abs.responsive-max-width(500px) {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+  }
 
 }
 
 .main-btn {
   @include abs.button-default();
   @include abs.background-transition-basic(transparent, abs.$color-primary);
+
+  @include abs.responsive-max-width(800px) {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  @include abs.responsive-max-width(500px) {
+    width: 130px;
+    height: 30px;
+    font-size: 10px;
+  }
 
 }

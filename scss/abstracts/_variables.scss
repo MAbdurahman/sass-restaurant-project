@@ -35,7 +35,24 @@ $color-grey-dark: #777;
 $color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
 
+// border
+$default-border: 1px solid $color-grey-dark;
+
+// border radius
+$default-border-radius: 3px;
+
+// box shadow
+$default-box-shadow: 1px 3px 5px rgba($color-black-pure, 0.2);
+
+// spacing
+$default-spacing: 8px 16px;
+$default-spacing-bottom: 8px;
+$default-spacing-top: 8px;
+$default-spacing-left: 16px;
+$default-spacing-right: 16px;
+
 // fonts
 $font-dancing-script: 'Dancing Script', cursive;
 $font-josefin-sans: 'Josefin Sans', sans-serif;
 $font-nunito: 'Nunito', sans-serif;
+
